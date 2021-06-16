@@ -7,7 +7,7 @@ router.get("/list", async (req, res) => {
     return res.status(200).json({ category });
 })
 
-router.post("/register", async (req, res) => {
+router.post("/register",  async (req, res) => {
     if (!req.body.name || !req.body.description) 
         return res.status(400).json({ message: "Error: incomplete data"})
     const categoryfind = await Category.findOne({name: req.body.name});
