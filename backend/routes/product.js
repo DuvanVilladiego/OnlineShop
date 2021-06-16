@@ -22,7 +22,6 @@ router.post("/register", async (req, res) => {
     price: req.body.price,
     category: category._id,
   });
-  console.log(category)
   try {
     const result = await product.save();
     if (!result)
@@ -33,7 +32,7 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     return res
       .status(400)
-      .json({ message: "Error: Failed to register product" });
+      .json({ message: "Error: Failed to register product" , err});
   }
 });
 

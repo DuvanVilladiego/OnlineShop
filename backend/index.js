@@ -7,6 +7,7 @@ const User = require('./routes/user')
 const Role = require('./routes/role')
 const Product = require('./routes/product')
 const Category = require('./routes/category')
+const Sales = require('./routes/sales')
 
 const app = express()
 
@@ -16,6 +17,7 @@ app.use('/api/user/', User)
 app.use('/api/role/', Role)
 app.use('/api/product/', Product)
 app.use('/api/category/', Category)
+app.use('/api/sales/', Sales)
 
 app.listen(process.env.PORT, () => 
     console.log('Server running on: ' + process.env.PORT)
