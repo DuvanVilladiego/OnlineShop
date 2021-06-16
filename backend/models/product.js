@@ -4,10 +4,8 @@ const productSchema = new mongoose.Schema(
 {
     name:String,
     description:String,
-    amount:Number,
     price:Number,       
     category:{type: mongoose.Schema.ObjectId, ref: 'category'},
-    sold:Number,
     date: {type: Date, default: Date.now},
 })
 
